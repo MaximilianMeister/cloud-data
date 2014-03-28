@@ -89,7 +89,8 @@ nova-multi-compute-vmware
   openstack-neutron-ovs-cleanup
   openstack-nova-compute
   openstack-nova-rpc-zmq-receiver
-  nova-multi-compute-xen 
+
+nova-multi-compute-xen 
   ebtables
   open-iscsi
   radvd
