@@ -1,0 +1,133 @@
+[DATABASE]
+database-server
+  postgresql
+
+[KEYSTONE]
+keystone-server
+  openstack-keystone
+
+[RABBITMQ]
+rabbitmq-server
+  rabbitmq-server
+
+[GLANCE]
+glance-server
+  openstack-glance-api
+  openstack-glance-registry
+
+[CINDER]
+cinder-controller
+  openstack-cinder-api
+  openstack-cinder-scheduler
+
+cinder-volume
+  openstack-cinder-volume
+  tgtd
+
+[NEUTRON]
+neutron-server
+  openstack-neutron
+
+neutron-l3
+  openvswitch-switch
+  openstack-neutron-dhcp-agent
+  openstack-neutron-l3-agent
+  openstack-neutron-metadata-agent
+  openstack-neutron-metering-agent
+  openstack-neutron-openvswitch-agent
+  openstack-neutron-ovs-cleanup
+
+[NOVA]
+nova-multi-controller
+  openstack-nova-rpc-zmq-receiver
+  openstack-nova-api
+  openstack-nova-conductor
+  openstack-nova-cert
+  openstack-nova-objectstore
+  openstack-nova-consoleauth
+  openstack-nova-novncproxy
+  openstack-nova-scheduler
+  memcached
+
+nova-multi-compute-kvm 
+  ebtables
+  open-iscsi
+  radvd
+  nfsserver
+  libvirt-guests
+  libvirtd
+  virtlockd
+  openstack-nova-rpc-zmq-receiver
+  openstack-nova-compute
+  
+nova-multi-compute-qemu 
+  ebtables
+  open-iscsi
+  radvd
+  dnsmasq
+  libvirt-guests
+  nfsserver
+  libvirtd
+  virtlockd
+  openvswitch-switch
+  openstack-neutron-openvswitch-agent
+  openstack-neutron-ovs-cleanup
+  openstack-nova-rpc-zmq-receiver
+  openstack-nova-compute
+
+nova-multi-compute-vmware 
+  ebtables
+  open-iscsi
+  radvd
+  nfsserver
+  dnsmasq
+  libvirt-guests
+  libvirtd
+  virtlockd
+  openvswitch-switch
+  openstack-neutron-openvswitch-agent
+  openstack-neutron-ovs-cleanup
+  openstack-nova-compute
+  openstack-nova-rpc-zmq-receiver
+  nova-multi-compute-xen 
+  ebtables
+  open-iscsi
+  radvd
+  dnsmasq
+  nfsserver
+  libvirt-guests
+  libvirtd
+  virtlockd
+  openvswitch-switch
+  openstack-neutron-openvswitch-agent
+  openstack-neutron-ovs-cleanup
+  openstack-nova-rpc-zmq-receiver
+  openstack-nova-compute
+  pciback
+  xen-watchdog
+  xencommons
+  xend
+  xendomains
+
+[HORIZON]
+nova_dashboard-server
+  apache2
+  memcached
+
+[CEILOMETER]
+ceilometer-server
+  mongodb
+  openstack-ceilometer-api
+  openstack-ceilometer-collector
+  openstack-ceilometer-collector-udp
+ceilometer-cagent
+  openstack-ceilometer-agent-central
+ceilometer-agent
+  openstack-ceilometer-agent-compute
+
+[HEAT]
+heat-server
+  openstack-heat-api
+  openstack-heat-api-cfn
+  openstack-heat-api-cloudwatch
+  openstack-heat-engine
