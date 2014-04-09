@@ -10,6 +10,13 @@ keystone-server
 rabbitmq-server
   rabbitmq-server
 
+[CEPH]
+ceph-mon
+  ceph
+
+ceph-osd
+  ceph
+
 [GLANCE]
 glance-server
   openstack-glance-api
