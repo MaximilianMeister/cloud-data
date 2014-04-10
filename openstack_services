@@ -17,6 +17,33 @@ ceph-mon
 ceph-osd
   ceph
 
+[SWIFT]
+swift-storage
+  openstack-swift-account
+  openstack-swift-account-auditor
+  openstack-swift-account-reaper
+  openstack-swift-account-replicator
+  openstack-swift-container
+  openstack-swift-container-auditor
+  openstack-swift-container-replicator
+  openstack-swift-container-updater
+  openstack-swift-object
+  openstack-swift-object-auditor
+  openstack-swift-object-expirer
+  openstack-swift-object-replicator
+  openstack-swift-object-updater
+
+swift-ring-compute
+
+swift-proxy
+  openstack-swift-proxy
+
+swift-dispersion
+  openstack-swift-account
+  openstack-swift-account-auditor
+  openstack-swift-account-reaper
+  openstack-swift-account-replicator
+
 [GLANCE]
 glance-server
   openstack-glance-api
